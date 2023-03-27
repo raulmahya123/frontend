@@ -4,7 +4,7 @@ import {getRandomColor,getRandomColorName} from "https://jscroot.github.io/image
 import {presensiTag,presensiClass,presensiContent} from "./template/table.js"
 
 
-let URLPresensi = "https://testinggeo1.herokuapp.com/presensi";
+let URLPresensi = "https://gocroot.herokuapp.com/presensi";
 
 get(URLPresensi,isiTablePresensi);
 
