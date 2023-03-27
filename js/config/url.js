@@ -1,1 +1,1 @@
-export let URLPresensi = "https://gocroot.herokuapp.com/presensi";
+export let URLPresensi = "https://gocroot.herokuapp.com";
