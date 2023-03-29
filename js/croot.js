@@ -1,21 +1,19 @@
 import { get } from "https://jscroot.github.io/api/croot.js";
-import {setInner,addChild } from "https://jscroot.github.io/element/croot.js";
-import {getRandomColor,getRandomColorName} from "https://jscroot.github.io/image/croot.js";
-import {presensiTag,presensiClass,presensiContent} from "./template/table.js"
+import { setInner } from "https://jscroot.github.io/element/croot.js";
 
-
-let URLPresensi = "https://gocroot.herokuapp.com/presensi";
+let URLPresensi = "https://golang4.herokuapp.com/presensi";
 
 get(URLPresensi,isiTablePresensi);
 
 function isiTablePresensi(results){
+    console.log(results);
     results.forEach(isiRow);
 }
 
 function isiRow(value){
-    let content=presensiContent.replace("#NAMA#",value.Biodata.Nama).replace("#PHONENUMBER#",value.Phone_number).replace("#LOKASI#",value.Location).replace("#KET#",value.Checkin).replace("#MASUK#",value.Datetime).replace("#PULANG#",value.Datetime).replace("#DURASI#",value.Datetime).replace("#WARNA#",getRandomColor()).replace(/#WARNALOGO#/g,getRandomColorName());
-    addChild("presensi",presensiTag,presensiClass,content);
+    console.log(value)
 }
+
 
 
 setInner("namadivisi","Dari croot.js");
