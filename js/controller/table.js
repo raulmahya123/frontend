@@ -7,6 +7,6 @@ export function isiTablePresensi(results){
 }
 
 function isiRow(value){
-    let content=presensiContent.replace("#NAMA#",value.Biodata.Nama).replace("#PHONENUMBER#",value.Phone_number).replace("#LOKASI#",value.Location).replace("#KET#",value.Checkin).replace("#MASUK#",value.Datetime).replace("#PULANG#",value.Datetime).replace("#DURASI#",value.Datetime).replace("#WARNA#",getRandomColor()).replace(/#WARNALOGO#/g,getRandomColorName());
+    let content=presensiContent.replace("#NAMA#",value.Longitude).replace("#PHONENUMBER#",value.Latitude).replace("#LOKASI#",value.Location).replace("#KET#",value.Phone_number).replace("#MASUK#",value.Datetime).replace("#PULANG#",value.Datetime).replace("#DURASI#",value.Datetime).replace("#WARNA#",getRandomColor()).replace(/#WARNALOGO#/g,getRandomColorName());
     addChild("presensi",presensiTag,presensiClass,content);
 }
